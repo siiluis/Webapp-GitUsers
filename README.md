@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
 ## Install project
-1 - Run `npm install `
+
+1 - Run `npm install`
+
 2 - Change branch `v1`
 
 ## Development server
