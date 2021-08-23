@@ -1,0 +1,21 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">Login</th>
+      <th scope="col">Score</th>
+      <th scope="col">Perfil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersService.usersList  |async; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{user.id}}</td>
+      <td>{{user.login}}</td>
+      <td>{{user.score |number : '1.2-2'}}</td>
+      <td><a [routerLink]="['/app/modules/users/perfil',user.login,user.score]"><i
+            class="bi bi-person-badge d-block " style="font-size: 2rem; color: green;"></i></a></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center gap-1">
+  <div>
+    <div class="input-group">
+      <span class="input-group-text">Username</span>
+      <input type="text" [formControl]="inputUsername" class="form-control" >
+    </div>
+
+    <div class="d-flex gap-1 mt-2">
+      <div *ngIf="inputUsername.errors?.minInvalid" class="badge bg-danger text-wrap">
+        <p>Mínimo de 4 caracteres.</p>
+      </div>
+      <div *ngIf="inputUsername.errors?.wordnotValid" class="badge bg-danger text-wrap">
+        <p>Esta palabra no esta permitida.</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success" [disabled]="inputUsername.invalid" (click)="findUser()">Buscar Usuario</button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="d-flex align-items-center border border-danger">
+
+  <div class="d-flex align-items">
+    <img [src]="perfil.avatar_url"   width="300" height="300" alt="...">
+  </div>
+
+  <div class= "border border-info">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{perfil.login}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{perfil.id}}</h6>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Reporsitories: {{perfil.public_repos}}</li>
+          <li class="list-group-item">Location: {{perfil.location}} </li>
+        </ul>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+
+</div>
